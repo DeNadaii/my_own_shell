@@ -3,7 +3,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-// List of shell biuld-in commands
+// List of shell build-in commands
 char builtinList[][10] = {"echo", "exit", "type"};
 
 int main(int argc, char *argv[])
@@ -41,7 +41,7 @@ int main(int argc, char *argv[])
       int isExecutable = 0;
       int isUnknown = 1;
 
-      // sizeof(builtinList)/sizeof(builtinList[0]) gives the vector length. Used it before, on other project
+      // sizeof(builtinList)/sizeof(builtinList[0]) gives the vector lenght. Used it before, on other project
       for (int i = 0; i < sizeof(builtinList) / sizeof(builtinList[0]); i++)
       {
         if (memcmp(parameter, builtinList[i], stringLength(builtinList[i])) == 0)
